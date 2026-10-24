@@ -30,9 +30,12 @@ print("c_list:",c_list)
 
 ### 题目分析   
 这题给出了9个n,9个c，与中国剩余定理有关。   
-我们首先回顾**中国剩余定理**  ：   
-![CRT1](https://github.com/user-attachments/assets/46446b7e-3c6c-409f-9418-3c45748bd97d)       
-![CRT2](https://github.com/user-attachments/assets/356eaf0f-43c5-4232-a24d-9b304adf518f)       
+我们首先回顾**中国剩余定理**  ：     
+    
+![](https://github.com/user-attachments/assets/46446b7e-3c6c-409f-9418-3c45748bd97d)       
+  
+![](https://github.com/user-attachments/assets/356eaf0f-43c5-4232-a24d-9b304adf518f)       
+  
 (这个是我原来的笔记的一部分)       
 对于这题我们可以直接使用 *crt(n_list,c_list)*     
 ### 代码书写     
@@ -51,7 +54,8 @@ if exact:
 ~~~
 
 ### 运行结果       
-![结果(不是，怎么这么大一片空白...)](https://github.com/user-attachments/assets/00849be2-4bef-4373-84b0-96a1fcaac1d9)      
+
+![](https://github.com/user-attachments/assets/00849be2-4bef-4373-84b0-96a1fcaac1d9)      
    
 考虑到题目中有对Flag填充，故而我们不用管最后'}'后面的一坨,直接截取前面的作为最后的flag.       
 flag 是  
@@ -221,7 +225,9 @@ Juliet = bytes(S1^^c for S1,c in zip(S,c2))
 print(Juliet.decode("utf-8"))
 ~~~
 ### 运行结果   
-![运行结果](https://github.com/user-attachments/assets/ef8a6063-1e54-4332-8b13-38aef5e27d2d)          
+
+![](https://github.com/user-attachments/assets/ef8a6063-1e54-4332-8b13-38aef5e27d2d)     
+
 ~~~python      
 老地方见，暗号是 SYC{black_dog_and_white_cat}。让我们一起改变这个世界
 ~~~      
@@ -295,8 +301,10 @@ key = sha256(str(x).encode()).digest()
 print(key)
 flag = bytes(ct[i] ^^ key[i % len(key)] for i in range(len(ct)))
 print(flag) 
-~~~      
-![运行情况](https://github.com/user-attachments/assets/d71e8153-2dc2-4d4a-a7e0-89164a05fe1d)      
+~~~
+
+![](https://github.com/user-attachments/assets/d71e8153-2dc2-4d4a-a7e0-89164a05fe1d)    
+
 最后的结果是：      
 ~~~python
 b'SYC{quadratic_residue_Cryp0_1s_S0_Easy}'
